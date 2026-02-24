@@ -28,54 +28,52 @@
 - 影像辨識 (YOLOv5)：商品辨識以提高取貨準確率
 ---
 ## 流程圖
+
+<br><br><br>
 <p align="center">
   <img src="assets/backend-architecture.png" width="600">
 </p>
+<p align="center">前後端互動式意圖</p>
 
-<p align="center">
-前後端互動式意圖 
-</p>
+<br><br><br>
 
 <p align="center">
   <img src="assets/car-workflow.png" width="600">
 </p>
+<p align="center">小車系統示意圖</p>
 
-<p align="center">
-小車系統示意圖
-</p>
+<br><br><br>
 
 <p align="center">
   <img src="assets/Vehicle Dispatch.png" width="600">
 </p>
+<p align="center">車輛派遣系統示意圖</p>
 
-<p align="center">
-車輛派遣系統示意圖
-</p>
+<br><br><br>
+
 <p align="center">
   <img src="assets/object-detection.png" width="600">
 </p>
+<p align="center">Yolov5 辨識流程圖</p>
 
-<p align="center">
-Yolov5 辨識流程圖
+<br><br><br>
 
 <p align="center">
   <img src="assets/Environment.png" width="600">
 </p>
-
-<p align="center">
-測試場地
-</p>
+<p align="center">測試場地</p>
 
 ---
 
 ## 實際Demo
-
+<br><br><br>
 <div align="center">
   <a href="https://youtu.be/z7E2M3_z6do">
     <img src="https://img.youtube.com/vi/z7E2M3_z6do/maxresdefault.jpg" alt="Unmanned Supermarket Demo" style="width:80%;">
   </a>
   <p><b>示範影片</b></p>
 </div>
+<br><br><br>
 
 ---
 
