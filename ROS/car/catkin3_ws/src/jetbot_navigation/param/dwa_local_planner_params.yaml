@@ -1,0 +1,42 @@
+base_local_planner: dwa_local_planner/DWAPlannerROS
+DWAPlannerROS: 
+
+  acc_lim_th: 2.0
+  acc_lim_x: 1.0 #0.3
+  acc_lim_y: 0.0 
+
+
+  max_vel_x: 0.2 
+  min_vel_x: 0.1 #0.1
+
+  max_vel_y: 0.0 
+  min_vel_y: 0.0
+
+  max_vel_trans: 1.5  #0.5 
+  min_vel_trans: 0.0 
+  max_vel_theta: 1.5 ## 0.2
+  min_vel_theta: 1.5
+
+  sim_time: 1.0
+
+  sim_granularity: 0.03
+  goal_distance_bias: 40.0  #24
+  path_distance_bias: 40.0  #40
+  occdist_scale: 0.01 
+  stop_time_buffer: 0.2 
+  oscillation_reset_dist: 0.05 
+  forward_point_distance: 0.5
+  scaling_speed: 0.5
+  max_scaling_factor: 0.2 
+  vx_samples: 15
+  vy_samples: 0 
+  vtheta_samples: 30
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.1
+  theta_stopped_vel: 0.003
+  trans_stopped_vel: 0.003
+
+
+
+
+

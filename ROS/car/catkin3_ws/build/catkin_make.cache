@@ -1,0 +1,2 @@
+jetbot_navigation:jetbot_slam:rf2o_laser_odometry:rplidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/jetbot/jetbot/catkin3_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jetbot/jetbot/catkin3_ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/jetbot/jetbot/catkin3_ws/install
+
+Name: jetbot_slam
+Description: Description of jetbot_slam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

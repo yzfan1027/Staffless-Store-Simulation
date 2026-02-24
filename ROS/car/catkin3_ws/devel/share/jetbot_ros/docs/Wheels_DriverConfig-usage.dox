@@ -1,0 +1,14 @@
+\subsubsection usage Usage
+\verbatim
+<node name="jetbot_ros" pkg="jetbot_ros" type="jetbot_ros">
+  <param name="PID_function" type="str" value="" />
+  <param name="speed_gain" type="double" value="0.0" />
+  <param name="steering_gain" type="double" value="1.0" />
+  <param name="trim" type="double" value="0.0" />
+  <param name="k" type="double" value="0.0" />
+  <param name="limit" type="double" value="0.0" />
+  <param name="radius" type="double" value="0.0318" />
+  <param name="save_parameter" type="bool" value="False" />
+</node>
+\endverbatim
+

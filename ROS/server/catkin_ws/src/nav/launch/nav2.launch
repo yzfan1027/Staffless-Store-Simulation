@@ -1,0 +1,39 @@
+<launch>
+    <arg name="vehicle" default="default" doc="Name of vehicle."/>
+    <arg name="pkg_name" default="navpub"/>
+    <arg name="node_name" default="move_base"/>
+    <arg name="pkg_path" default="$(find nav)"/>
+    <arg name="map_file" default="map01.yaml" doc="Which map do you want ot use."/>
+    <arg name="enable" default="false"/>
+    <arg name="global_planner" default="global_planner"/>
+    <arg name="local_planner" default="dwa" doc="Which local planner do you want to use. Now can use [dwa] or [teb]"/>
+    <arg name="open_rviz" default="false" doc="open rviz or not"/>
+    <arg name="costmap_plugin_sensor_source" default="obstacle_layer/laser_scan_sensor"/>
+          
+
+    <node name="map_server" pkg="map_server" type="map_server" args="/home/yzf/catkin_ws/src/nav/map/$(arg map_file)"/>
+ <!--  -->
+  <include file="$(find nav)/launch/one_nav.launch">
+    	<arg name="vehicle" value="robot1"/>
+    	<arg name="x" value="0.5895287368630184"/>
+	<arg name="y" value="1.9000875830678288"/>
+	<arg name="a" value="0"/>
+    </include>  
+   
+    <include file="$(find nav)/launch/one_nav.launch">
+    	<arg name="vehicle" value="robot2"/>
+    	<arg name="x" value="0.4201565167342714"/>
+	<arg name="y" value="1.0383956565977317"/>
+	<arg name="a" value="0"/>
+    </include>
+   
+    <include file="$(find nav)/launch/one_nav.launch">
+    	<arg name="vehicle" value="robot3"/>
+    	<arg name="x" value="0.016035294778452423"/>
+	<arg name="y" value="-0.0035577143435607146"/>
+	<arg name="a" value="0"/> 
+    </include>
+    <!-- <node name="rviz" type="rviz" args="-d "/> -->
+
+	
+</launch>

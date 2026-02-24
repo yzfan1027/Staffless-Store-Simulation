@@ -1,0 +1,13 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~PID_function" : \b [str] (gain +/- trim)(v +/- 0.5 * omega * baseline) / (r * k_r) min: , default: , max: 
+- \b "~speed_gain" : \b [double] speed gain min: 0.0, default: 0.0, max: 10.0
+- \b "~steering_gain" : \b [double] Steering gain min: -10.0, default: 1.0, max: 10.0
+- \b "~trim" : \b [double] trim min: -1.0, default: 0.0, max: 1.0
+- \b "~k" : \b [double] k min: 0.0, default: 0.0, max: 100.0
+- \b "~limit" : \b [double] limit min: 0.0, default: 0.0, max: 2.0
+- \b "~radius" : \b [double] radius min: 0.0, default: 0.0318, max: 2.0
+- \b "~save_parameter" : \b [bool] save parameter in package min: False, default: False, max: True
+

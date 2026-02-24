@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <arg name="veh" default="robot1" doc="Name of vehicle. ex: megaman"/>
+    <arg name="config" default="baseline" doc="Specify a config."/>
+    <arg name="param_file_name" default="default" doc="Specify a param file. ex:megaman." />
+    <arg name="use_rviz" default="false" />
+    
+    <!-- YDLidar -->
+    <node name="$(arg veh)_rplidarNode"  pkg="rplidar_ros"  type="rplidarNode" output="screen" respawn="false">
+        <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>
+        <param name="frame_id"            type="string" value="$(arg veh)/laser_frame"/>
+        
+        <rosparam file="$(find jetbot_slam)/param/ydlidar_params.yaml" command="load"/>
+        <remap from ="/scan" to ="/$(arg veh)/scan"/>
+    </node>
+
+    <!-- TF setting -->
+   <!-- <node pkg="tf" type="static_transform_publisher" name="$(arg veh)_base_footprint2base_link" args="0 0 0.06 0 0 0 $(arg veh)/base_footprint $(arg veh)/base_link 10"/> -->
+
+  <!--  <node pkg="tf" type="static_transform_publisher" name="$(arg veh)_base_link2laser_link" args="0.0 0 0.09 3.1415927 0 0 /base_link /laser_frame 142"/> -->
+
+    <node pkg="tf" type="static_transform_publisher" name="$(arg veh)_base_link_to_laser4" args="0.0 0.0 0.15 3.1415927 0.0 0.0 $(arg veh)/base_link $(arg veh)/laser_frame 100" />
+
+    <!-- ODOMETRY -->
+    <!--rf2o_Laser_Odometry-->
+    <node pkg="rf2o_laser_odometry" type="rf2o_laser_odometry_node" name="$(arg veh)_rf2o_laser_odometry">
+      <param name="laser_scan_topic" value="/$(arg veh)/scan"/>        # topic where the lidar scans are being published
+      <param name="odom_topic" value="/$(arg veh)/odom" />              # topic where tu publish the odometry estimations
+      <param name="publish_tf" value="true" />                   # wheter or not to publish the tf::transform (base->odom)
+      <param name="base_frame_id" value="$(arg veh)/base_link"/>            # frame_id (tf) of the mobile robot base. A tf transform from the laser_frame to the base_frame is mandatory
+      <param name="odom_frame_id" value="$(arg veh)/odom" />                # frame_id (tf) to publish the odometry estimations    
+      <param name="init_pose_from_topic" value="" /> # (Odom topic) Leave empty to start at point (0,0)
+      <param name="freq" value="6"/>                            # Execution frequency.
+      <param name="verbose" value="true" />                       # verbose
+    </node>
+
+       <!-- launch nav_control.launch 
+
+           <include  file="$(find jetbot_navigation)/launch/nav_control.launch"/> -->
+     
+       <!-- End launch nav_control.launch -->
+
+
+</launch>

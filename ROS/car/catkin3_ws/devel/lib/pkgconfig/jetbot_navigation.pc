@@ -1,0 +1,8 @@
+prefix=/home/jetbot/jetbot/catkin3_ws/devel
+
+Name: jetbot_navigation
+Description: Description of jetbot_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

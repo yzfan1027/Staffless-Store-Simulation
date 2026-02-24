@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jetbot/jetbot/catkin3_ws/install/setup.sh
