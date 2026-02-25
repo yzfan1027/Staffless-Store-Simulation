@@ -92,6 +92,12 @@
 
 ---
 
+## 設備
+- Server：Jetson orin nano developer kit  
+- Car : Jetson nano + RPLidar A1 + Jetbot
+
+---
+
 ## 貢獻者
 - 指導教授：[丁德榮(Der-Rong Din)](https://webap1s.ncue.edu.tw/ET/Apps/HR/HonorBolg.aspx?id=deron#PostGraduate)
 - 陳佑丞、王長盛、呂長遠、賴宏運、范育誌、王楷儒
